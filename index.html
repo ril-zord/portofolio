@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Digital - Mahasiswa Teknik Elektronika & Electrical Engineering. Fokus pada Arduino, hardware wiring, dan sistem kelistrikan.">
+  <title>Portofolio | Electrical Engineering</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="glow-bg-top" aria-hidden="true"></div>
+  <div class="glow-bg-bottom" aria-hidden="true"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <span class="brand-symbol">⚡</span>
+        <span class="brand-text">EE<span class="text-accent">.Portfolio</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION (HOME) -->
+    <section class="hero section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Mahasiswa Teknik Elektronika &bull; Terbuka untuk Kesempatan Proyek & Magang</span>
+          </div>
+
+          <h1 class="hero-title">
+            Electrical Engineering <span class="text-gradient">Student</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Fokus pada <strong class="text-white">Perancangan Sistem Kelistrikan</strong>, <strong class="text-white">Hardware Wiring</strong>, dan Pemrograman Mikrokontroler <strong class="text-white">Arduino</strong>.
+          </p>
+
+          <blockquote class="hero-tagline">
+            &ldquo;Menerjemahkan logika kontrol dan skema kelistrikan menjadi sistem perangkat keras yang berfungsi nyata.&rdquo;
+          </blockquote>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Lihat Proyek
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Hubungi Saya
+            </a>
+          </div>
+
+          <div class="quick-chips">
+            <span class="chip">🔌 Hardware Wiring</span>
+            <span class="chip">⚙️ Arduino C/C++</span>
+            <span class="chip">💡 Circuit Assembly</span>
+            <span class="chip">🔍 Analytical Troubleshooting</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Element -->
+        <div class="hero-visual">
+          <div class="circuit-card">
+            <div class="card-header-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="window-title">system_status.log</span>
+            </div>
+            <div class="code-box">
+              <p class="code-line"><span class="code-comment">// Konfigurasi Sistem Kontrol</span></p>
+              <p class="code-line"><span class="code-keyword">const int</span> ledMerah = <span class="code-num">13</span>;</p>
+              <p class="code-line"><span class="code-keyword">const int</span> ledHijau = <span class="code-num">12</span>;</p>
+              <p class="code-line"><span class="code-keyword">const int</span> buttonPin = <span class="code-num">2</span>;</p>
+              <p class="code-line">&nbsp;</p>
+              <p class="code-line"><span class="code-comment">// Status Sirkuit</span></p>
+              <p class="code-line"><span class="code-func">Serial</span>.<span class="code-func">println</span>(<span class="code-str">"Wiring Checked: OK"</span>);</p>
+              <p class="code-line"><span class="code-func">Serial</span>.<span class="code-func">println</span>(<span class="code-str">"Circuit Ready: Pedestrian Crossing"</span>);</p>
+            </div>
+            <div class="circuit-meta">
+              <div class="meta-item">
+                <span class="meta-label">Domain</span>
+                <span class="meta-value">Electrical & Control</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Target Role</span>
+                <span class="meta-value">Electrical Engineer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Profil</span>
+          <h2 class="section-title">Tentang Saya</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card">
+            <p class="lead-text">
+              Saya adalah mahasiswa <strong>Teknik Elektronika</strong> yang berfokus pada integrasi sistem kelistrikan dan logika kendali perangkat keras. Selama masa studi dan pengerjaan proyek, saya terbiasa menangani perakitan sirkuit, wiring kabel, serta memprogram logika operasional menggunakan mikrokontroler <strong>Arduino</strong>.
+            </p>
+            <p>
+              Pendekatan saya didasarkan pada ketelitian dan pemikiran analitis. Saya menikmati tantangan dalam memecahkan masalah teknis (troubleshooting)—mulai dari mengidentifikasi sumber kesalahan pada jalur sirkuit, merapikan perkabelan agar stabil dan aman, hingga memastikan sensor serta aktuator menerima sinyal secara presisi.
+            </p>
+
+            <div class="profile-details-list">
+              <div class="detail-item">
+                <span class="detail-icon">🎓</span>
+                <div>
+                  <strong>Status Akademik</strong>
+                  <p>Mahasiswa Teknik Elektronika</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🎯</span>
+                <div>
+                  <strong>Fokus Keahlian</strong>
+                  <p>Sistem Kelistrikan, Wiring & Mikrokontroler</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <strong>Domisili</strong>
+                  <p>[Belum diisi / Indonesia]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">⚡</div>
+              <h3>Dasar Kelistrikan</h3>
+              <p>Memahami prinsip rangkaian, pembagian tegangan, beban komponen, dan kestabilan suplai daya.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🔌</div>
+              <h3>Wiring Terstruktur</h3>
+              <p>Ketelitian merangkai jumper dan kabel koneksi agar terisolasi rapi, minim noise, dan mudah dilacak.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🧠</div>
+              <h3>Analytical Troubleshooting</h3>
+              <p>Mendiagnosis kerusakan atau malfungsi logika secara metodis dari level fisik hingga baris kode.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section class="section bg-surface" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Keahlian</span>
+          <h2 class="section-title">Keahlian Teknis</h2>
+          <p class="section-subtitle">Daftar kemampuan terverifikasi yang langsung diterapkan pada pengerjaan sirkuit dan proyek.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">💻</div>
+              <h3>Programming Languages & Platform</h3>
+            </div>
+            <ul class="skill-items">
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Arduino IDE</strong>
+                  <p>Pemrograman logika C/C++ untuk mikrokontroler</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Logika Kontrol I/O</strong>
+                  <p>Manajemen pin digital, pembacaan tombol, dan aktuasi LED</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">⚡</div>
+              <h3>Electrical</h3>
+            </div>
+            <ul class="skill-items">
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Sistem Kelistrikan</strong>
+                  <p>Prinsip dasar aliran arus, hambatan, dan tegangan</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Perancangan Rangkaian</strong>
+                  <p>Integrasi komponen pasif/aktif sesuai batas daya kerja</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🔌</div>
+              <h3>Wiring</h3>
+            </div>
+            <ul class="skill-items">
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Hardware Wiring & Assembly</strong>
+                  <p>Perakitan jalur kabel, jumpering, dan koneksi breadboard</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Konektivitas Komponen</strong>
+                  <p>Integrasi kabel sensor, tombol input, dan aktuator sinyal</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">🧩</div>
+              <h3>Problem Solving</h3>
+            </div>
+            <ul class="skill-items">
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Analytical Thinking</strong>
+                  <p>Pendekatan sistematis memecahkan persoalan alur logika</p>
+                </div>
+              </li>
+              <li>
+                <span class="check-bullet">✔</span>
+                <div>
+                  <strong>Circuit Troubleshooting</strong>
+                  <p>Pendeteksian kesalahan sambungan dan koreksi kabel longgar</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portofolio</span>
+          <h2 class="section-title">Proyek Pilihan</h2>
+          <p class="section-subtitle">Implementasi nyata sistem kelistrikan, wiring perangkat keras, dan mikrokontroler.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="project-showcase">
+          <!-- Featured Project Card -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-group">
+                <span class="badge badge-accent">Featured Project</span>
+                <span class="badge">Hardware & Control</span>
+              </div>
+              <h3 class="project-title">Sistem Simulasi Penyebrangan Jalan Otomatis</h3>
+              <p class="project-sub">Pedestrian Crossing Simulation System with Arduino</p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-pills">
+                <span class="pill">Arduino</span>
+                <span class="pill">Electrical Circuit</span>
+                <span class="pill">Hardware Wiring</span>
+                <span class="pill">Push Button</span>
+                <span class="pill">LED Indicators</span>
+              </div>
+
+              <div class="project-overview-grid">
+                <div class="overview-box">
+                  <span class="box-icon">⚠️</span>
+                  <h4>Problem</h4>
+                  <p>Tingginya potensi insiden lalu lintas di titik penyeberangan akibat ketidakteraturan jeda waktu antara kendaraan dan pejalan kaki.</p>
+                </div>
+                <div class="overview-box">
+                  <span class="box-icon">💡</span>
+                  <h4>Solution</h4>
+                  <p>Merancang prototipe simulasi lalu lintas interaktif dengan tombol pedestrian yang mengatur pergantian sinyal lampu secara aman dan otomatis.</p>
+                </div>
+              </div>
+
+              <!-- Technical Details Accordion / Tabs -->
+              <div class="project-detail-section">
+                <div class="detail-block">
+                  <h4>Peran & Kontribusi Saya</h4>
+                  <ul class="feature-checklist">
+                    <li><strong>Perancangan Wiring:</strong> Menentukan dan menyusun jalur kabel antara mikrokontroler Arduino, resistor, LED, dan tombol masukan.</li>
+                    <li><strong>Perakitan Kelistrikan:</strong> Merangkai sirkuit pada papan sirkuit/breadboard serta memastikan polaritas dan tegangan aman.</li>
+                    <li><strong>Pemrograman Logika:</strong> Menulis kode kendali untuk mengatur jeda durasi lampu hijau, kuning, dan merah.</li>
+                    <li><strong>Pengujian & Troubleshooting:</strong> Menguji keandalan penekanan tombol dan memeriksa sambungan yang rentan longgar.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-block">
+                  <h4>Fitur Sistem</h4>
+                  <div class="feature-tags-grid">
+                    <div class="feature-tag-item">🚦 Siklus lampu lalu lintas kendaraan default</div>
+                    <div class="feature-tag-item">🔘 Tombol pemicu permintaan penyeberang jalan</div>
+                    <div class="feature-tag-item">🚶 Indikator lampu sinyal penyeberang (jalan/berhenti)</div>
+                    <div class="feature-tag-item">⚡ Pengkabelan terisolasi dengan pembagian resistor proteksi</div>
+                  </div>
+                </div>
+
+                <div class="detail-block">
+                  <h4>Hasil & Bukti</h4>
+                  <div class="result-box">
+                    <p>
+                      Prototipe simulasi berhasil mendemonstrasikan transisi sinyal lalu lintas yang aman saat pejalan kaki menekan tombol. Rangkaian wiring terpasang stabil dan seluruh indikator LED menyala sesuai skenario logika.
+                    </p>
+                    <span class="info-note">*(Dokumentasi metrik & foto perakitan tambahan: [Belum diisi])*</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Links / CTA -->
+              <div class="project-footer">
+                <div class="project-links">
+                  <a href="#contact" class="btn btn-sm btn-outline">
+                    <span>Repository: [Belum diisi]</span>
+                  </a>
+                  <a href="#contact" class="btn btn-sm btn-outline">
+                    <span>Dokumentasi/Demo: [Belum diisi]</span>
+                  </a>
+                </div>
+                <span class="project-status">Status: Selesai (Prototipe Teruji)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EXPERIENCE SECTION -->
+    <section class="section bg-surface" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pengalaman</span>
+          <h2 class="section-title">Pengalaman Proyek</h2>
+          <p class="section-subtitle">Riwayat implementasi sistem perangkat keras dan simulasi.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Pengembang Sistem Simulasi</h3>
+                  <span class="timeline-org">Akademik, Pribadi & Proyek Mandiri</span>
+                </div>
+                <span class="timeline-period">[Periode: Belum diisi]</span>
+              </div>
+              <p class="timeline-desc">
+                Mengembangkan dan merakit sistem simulasi lalu lintas penyeberangan jalan untuk kebutuhan studi teknik elektronika dan eksplorasi perangkat keras.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Melakukan perancangan skema dan wiring sirkuit kelistrikan menggunakan mikrokontroler Arduino.</li>
+                <li>Merangkai komponen input/output (push button, resistor, LED) dan memastikan distribusi daya tepat.</li>
+                <li>Mendiagnosis kendala teknis (troubleshooting) sambungan perkabelan dan debugging baris instruksi logika.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">Electrical</span>
+                <span class="tag">Hardware Wiring</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pendidikan</span>
+          <h2 class="section-title">Latar Belakang Pendidikan</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <div class="edu-heading-row">
+              <div>
+                <h3 class="edu-degree">Teknik Elektronika</h3>
+                <span class="edu-institution">[Nama Kampus / Institusi: Belum diisi]</span>
+              </div>
+              <span class="edu-badge">Mahasiswa Aktif</span>
+            </div>
+            <p class="edu-desc">
+              Menempuh studi yang berfokus pada pemahaman fundamental elektronika, teori rangkaian kelistrikan, aplikasi komponen semikonduktor, dan pemrograman kontrol mikrokontroler.
+            </p>
+            <div class="edu-focus-list">
+              <span class="edu-focus-item">Sistem Rangkaian Elektronika</span>
+              <span class="edu-focus-item">Mikrokontroler & Instrumentasi</span>
+              <span class="edu-focus-item">Analisis Kelistrikan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section class="section bg-surface" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Kontak</span>
+          <h2 class="section-title">Hubungi Saya</h2>
+          <p class="section-subtitle">
+            Terbuka untuk diskusi proyek perangkat keras, magang, maupun posisi entry-level di bidang Electrical Engineering.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-val" id="emailVal">[Email: Belum diisi]</span>
+              </div>
+              <button class="copy-btn" id="copyEmailBtn" title="Salin Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                <span class="copy-tooltip">Salin</span>
+              </button>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">💼</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-val">[LinkedIn: Belum diisi]</span>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">💻</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">GitHub / Portofolio</span>
+                <span class="contact-card-val">[GitHub: Belum diisi]</span>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Lokasi</span>
+                <span class="contact-card-val">[Domisili: Belum diisi / Indonesia]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Note / Message Box -->
+          <div class="contact-message-card">
+            <h3>Siap Berkolaborasi</h3>
+            <p>
+              Portofolio ini merepresentasikan kemampuan dasar kelistrikan dan perakitan sistem yang telah saya kerjakan. Jika instansi atau tim Anda membutuhkan engineer dengan dedikasi tinggi dan kemampuan problem solving lapangan, silakan hubungi saya melalui jalur komunikasi di samping.
+            </p>
+            <div class="cta-box">
+              <span class="cta-box-icon">📋</span>
+              <p>CV & Transkrip Akademik tersedia berdasarkan permintaan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-symbol">⚡</span>
+        <span>Electrical Engineering Portfolio</span>
+      </div>
+      <p class="footer-copy">&copy; <span id="currentYear">2026</span> - Hak Cipta Dilindungi. Dibuat dengan HTML, CSS & JavaScript murni.</p>
+      <a href="#home" class="back-to-top" aria-label="Kembali ke atas">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
