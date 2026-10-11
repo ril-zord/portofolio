@@ -803,6 +803,128 @@ body {
   line-height: 1.55;
 }
 
+/* Schematic Documentation Wrapper */
+.project-schematic-wrapper {
+  background: #090e1a;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.schematic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0d1527;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.schematic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.schematic-file {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.schematic-img-container {
+  position: relative;
+  background: #f8fafc;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schematic-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.schematic-overlay {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.schematic-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 20px;
+  background: #0d1527;
+}
+
+.legend-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.legend-num {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.legend-info strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+
+.legend-info p {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
 .project-detail-section {
   display: flex;
   flex-direction: column;
@@ -1444,6 +1566,28 @@ body {
 
   .feature-tags-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Schematic Mobile Adaptations */
+  .schematic-img-container {
+    padding: 12px;
+  }
+
+  .schematic-overlay {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .schematic-overlay .btn {
+    width: 100%;
+  }
+
+  .schematic-legend {
+    grid-template-columns: 1fr;
+    padding: 16px;
   }
 
   .project-footer {

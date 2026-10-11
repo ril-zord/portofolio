@@ -329,23 +329,78 @@
 
             <div class="project-body">
               <div class="project-meta-pills">
-                <span class="pill">Arduino</span>
-                <span class="pill">Electrical Circuit</span>
-                <span class="pill">Hardware Wiring</span>
-                <span class="pill">Push Button</span>
-                <span class="pill">LED Indicators</span>
+                <span class="pill">Arduino UNO R2</span>
+                <span class="pill">7-Segment Display (D1X8K-14BL)</span>
+                <span class="pill">Active Buzzer (BZ1)</span>
+                <span class="pill">Traffic LEDs (Red/Yellow/Green)</span>
+                <span class="pill">Push Button (SW1)</span>
+                <span class="pill">220Ω Protection Resistors</span>
+                <span class="pill">Hardware Wiring & Schematic</span>
               </div>
 
               <div class="project-overview-grid">
                 <div class="overview-box">
                   <span class="box-icon">⚠️</span>
                   <h4>Problem</h4>
-                  <p>Tingginya potensi insiden lalu lintas di titik penyeberangan akibat ketidakteraturan jeda waktu antara kendaraan dan pejalan kaki.</p>
+                  <p>Tingginya potensi insiden lalu lintas di titik penyeberangan akibat ketidakteraturan jeda waktu antara kendaraan dan pejalan kaki, serta minimnya indikator waktu tunggu dan sinyal aksesibilitas audio.</p>
                 </div>
                 <div class="overview-box">
                   <span class="box-icon">💡</span>
                   <h4>Solution</h4>
-                  <p>Merancang prototipe simulasi lalu lintas interaktif dengan tombol pedestrian yang mengatur pergantian sinyal lampu secara aman dan otomatis.</p>
+                  <p>Merancang sistem simulasi lalu lintas cerdas yang mengintegrasikan lampu sinyal kendaraan, display hitung mundur (countdown 7-segment), serta buzzer peringatan suara yang dipicu melalui tombol penyeberang.</p>
+                </div>
+              </div>
+
+              <!-- DOKUMENTASI SKEMATIK RANGKAIAN -->
+              <div class="project-schematic-wrapper">
+                <div class="schematic-header">
+                  <div class="schematic-badge">
+                    <span class="badge-dot"></span>
+                    <span>Bukti Dokumentasi Skematik Rangkaian</span>
+                  </div>
+                  <span class="schematic-file">schematic_pedestrian_crossing.png</span>
+                </div>
+
+                <div class="schematic-img-container">
+                  <img src="assets/schematic-pedestrian-crossing.png" alt="Skematik Rangkaian Arduino Sistem Penyebrangan Jalan" class="schematic-img" loading="lazy">
+                  <div class="schematic-overlay">
+                    <a href="assets/schematic-pedestrian-crossing.png" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                      Lihat Resolusi Penuh
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Schematic Module Breakdown Legend -->
+                <div class="schematic-legend">
+                  <div class="legend-card">
+                    <div class="legend-num">1</div>
+                    <div class="legend-info">
+                      <strong>Unit Mikrokontroler (Arduino UNO R2)</strong>
+                      <p>Mengendalikan seluruh logika I/O pada pin digital D2 hingga D13 dan menyediakan bus grounding (GND).</p>
+                    </div>
+                  </div>
+                  <div class="legend-card">
+                    <div class="legend-num">2</div>
+                    <div class="legend-info">
+                      <strong>Display Hitung Mundur (7-Segment D1X8K-14BL)</strong>
+                      <p>Menampilkan sisa waktu penyeberangan. Dihubungkan ke pin D7–D12 dengan resistor pembatas arus R4–R10 (220Ω).</p>
+                    </div>
+                  </div>
+                  <div class="legend-card">
+                    <div class="legend-num">3</div>
+                    <div class="legend-info">
+                      <strong>Sinyal Lampu Lalu Lintas (LED Merah, Kuning, Hijau)</strong>
+                      <p>D1 (Red), D2 (Yellow), D3 (Green) terhubung ke pin D4, D3, D2 masing-masing diproteksi resistor R1–R3 (220Ω).</p>
+                    </div>
+                  </div>
+                  <div class="legend-card">
+                    <div class="legend-num">4</div>
+                    <div class="legend-info">
+                      <strong>Aksesibilitas Audio (Buzzer BZ1) & Tombol (SW1)</strong>
+                      <p>Buzzer pada pin D5–D6 memberikan sinyal suara aman menyeberang, dipicu melalui tombol tekan SW1 pada pin D13.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -354,30 +409,31 @@
                 <div class="detail-block">
                   <h4>Peran & Kontribusi Saya</h4>
                   <ul class="feature-checklist">
-                    <li><strong>Perancangan Wiring:</strong> Menentukan dan menyusun jalur kabel antara mikrokontroler Arduino, resistor, LED, dan tombol masukan.</li>
-                    <li><strong>Perakitan Kelistrikan:</strong> Merangkai sirkuit pada papan sirkuit/breadboard serta memastikan polaritas dan tegangan aman.</li>
-                    <li><strong>Pemrograman Logika:</strong> Menulis kode kendali untuk mengatur jeda durasi lampu hijau, kuning, dan merah.</li>
-                    <li><strong>Pengujian & Troubleshooting:</strong> Menguji keandalan penekanan tombol dan memeriksa sambungan yang rentan longgar.</li>
+                    <li><strong>Perancangan Skematik & Wiring:</strong> Menyusun skema rangkaian lengkap, menentukan pemetaan pin Arduino, dan mengalokasikan nilai resistor 220Ω untuk mencegah beban arus berlebih (overcurrent).</li>
+                    <li><strong>Integrasi Komponen I/O:</strong> Menghubungkan modul 7-segment display Common Cathode, 3 LED lalu lintas, buzzer peringatan, serta push button ke jalur ground bersama.</li>
+                    <li><strong>Pemrograman Logika Kontrol:</strong> Menulis instruksi kendali siklus lampu lalu lintas, algoritma multiplexing/dekode segmen display, serta frekuensi bunyi buzzer.</li>
+                    <li><strong>Analisis & Troubleshooting:</strong> Menguji alur sinyal logika, kestabilan jalur perkabelan (wiring harness), dan respon pemicu tombol.</li>
                   </ul>
                 </div>
 
                 <div class="detail-block">
-                  <h4>Fitur Sistem</h4>
+                  <h4>Fitur Utama Sistem</h4>
                   <div class="feature-tags-grid">
-                    <div class="feature-tag-item">🚦 Siklus lampu lalu lintas kendaraan default</div>
-                    <div class="feature-tag-item">🔘 Tombol pemicu permintaan penyeberang jalan</div>
-                    <div class="feature-tag-item">🚶 Indikator lampu sinyal penyeberang (jalan/berhenti)</div>
-                    <div class="feature-tag-item">⚡ Pengkabelan terisolasi dengan pembagian resistor proteksi</div>
+                    <div class="feature-tag-item">🚦 Siklus lampu lalu lintas kendaraan otomatis 3 fase (Merah, Kuning, Hijau)</div>
+                    <div class="feature-tag-item">🔢 Indikator hitung mundur visual via 7-Segment Display (D1X8K-14BL)</div>
+                    <div class="feature-tag-item">🔔 Alarm audio peringatan penyeberang jalan menggunakan Buzzer terintegrasi</div>
+                    <div class="feature-tag-item">🔘 Tombol pemicu interaktif penyeberangan jalan (Push Button SW1)</div>
+                    <div class="feature-tag-item">⚡ Proteksi arus menggunakan resistor 220Ω di setiap jalur LED & segmen</div>
+                    <div class="feature-tag-item">🔌 Jalur Common Cathode & Ground terintegrasi rapi ke mikrokontroler</div>
                   </div>
                 </div>
 
                 <div class="detail-block">
-                  <h4>Hasil & Bukti</h4>
+                  <h4>Hasil & Verifikasi</h4>
                   <div class="result-box">
                     <p>
-                      Prototipe simulasi berhasil mendemonstrasikan transisi sinyal lalu lintas yang aman saat pejalan kaki menekan tombol. Rangkaian wiring terpasang stabil dan seluruh indikator LED menyala sesuai skenario logika.
+                      Skematik dan prototipe simulasi penyeberangan jalan berhasil memvalidasi seluruh fungsionalitas: transisi warna lampu berjalan tertib, display 7-segment menampilkan countdown secara akurat, buzzer memberikan indikasi suara yang jelas, dan seluruh jalur wiring terproteksi oleh resistor 220Ω tanpa risiko korsleting.
                     </p>
-                    <span class="info-note">*(Dokumentasi metrik & foto perakitan tambahan: [Belum diisi])*</span>
                   </div>
                 </div>
               </div>
@@ -385,14 +441,16 @@
               <!-- Links / CTA -->
               <div class="project-footer">
                 <div class="project-links">
-                  <a href="#contact" class="btn btn-sm btn-outline">
-                    <span>Repository: [Belum diisi]</span>
+                  <a href="https://github.com/ril-zord/portofolio" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <span>Repository GitHub</span>
                   </a>
-                  <a href="#contact" class="btn btn-sm btn-outline">
-                    <span>Dokumentasi/Demo: [Belum diisi]</span>
+                  <a href="assets/schematic-pedestrian-crossing.png" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                    <span>Dokumentasi Skematik</span>
                   </a>
                 </div>
-                <span class="project-status">Status: Selesai (Prototipe Teruji)</span>
+                <span class="project-status">Status: Selesai & Terverifikasi</span>
               </div>
             </div>
           </article>
