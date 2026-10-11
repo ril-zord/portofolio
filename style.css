@@ -374,6 +374,19 @@ body {
   box-shadow: 0 0 8px var(--accent-emerald);
 }
 
+.hero-greeting {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.text-name {
+  color: var(--text-white);
+  font-weight: 700;
+}
+
 .hero-title {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 800;
@@ -1139,6 +1152,17 @@ body {
   font-weight: 600;
   color: var(--text-white);
   word-break: break-all;
+}
+
+.contact-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: var(--text-white);
 }
 
 .copy-btn {
